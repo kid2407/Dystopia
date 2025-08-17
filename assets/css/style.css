@@ -5,8 +5,8 @@
 :root {
     --navigation-background-color: #4b1131;
     --common-text-color:           white;
-    --body-background-color:       #731b47;
-    --common-background-color:     #c02f76;
+    --body-background-color:       #8816c9;
+    --common-background-color:     #282828;
     --navbar-height:               50px;
     --header-height:               200px;
 }
@@ -17,9 +17,12 @@ html, body {
 }
 
 body {
-    height:           100vh;
-    background-color: var(--body-background-color);
-    color:            var(--common-text-color);
+    height:                100vh;
+    background-color:      var(--body-background-color);
+    color:                 var(--common-text-color);
+    background-image:      url('/assets/img/Poster_Dystopia.png');
+    background-attachment: fixed;
+    background-position-y: calc(var(--header-height) + var(--navbar-height));
 }
 
 .navbar {
@@ -89,8 +92,9 @@ ul.inline > li > a:hover {
 
 #mainContainer {
     background-color: var(--common-background-color);
-    padding:          10px;
-    min-height:       calc(100% - var(--header-height) - var(--navbar-height) - 20px);
+    height:           calc(100% - var(--header-height) - var(--navbar-height));
+    overflow-y:       auto;
+    scrollbar-width:  none;
 }
 
 /**
