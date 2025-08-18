@@ -1,9 +1,5 @@
-.unfinished {
-    color: red !important;
-}
-
 /**
- * Allgemeine Stile
+ * Common Style data
  */
 
 :root {
@@ -14,6 +10,12 @@
     --dropdown-color:              #a22464;
     --navbar-height:               50px;
     --header-height:               250px;
+    --sponsor-heading-height:      52px;
+}
+
+a {
+    color:           red;
+    text-decoration: none;
 }
 
 html, body {
@@ -27,12 +29,10 @@ body {
     color:                 var(--common-text-color);
     background-image:      url('/assets/img/Poster_Dystopia.png');
     background-attachment: fixed;
-    /*background-position-y: calc(var(--header-height) + var(--navbar-height));*/
 }
 
 .navbar {
     background-color: var(--navigation-background-color);
-    color:            var(--common-text-color);
     height:           var(--navbar-height);
     display:          block;
     float:            left;
@@ -56,8 +56,12 @@ body {
     padding: 10px;
 }
 
+hr {
+    border: 1px solid var(--dropdown-color);
+}
+
 /**
- * Navigationsleiste
+ * Navbar
  */
 
 div.navbar ul.inline {
@@ -79,12 +83,12 @@ div.navbar ul.inline li {
 div.navbar > div.container > ul.inline > li {
     width:      16.666666%;
     text-align: center;
+    z-index:    1;
 }
 
 div.navbar ul.inline li > a {
-    padding:         14px 20px;
+    padding:         13.5px 20px;
     display:         block;
-    color:           var(--common-text-color);
     text-decoration: none;
     font-size:       20px;
 }
@@ -134,6 +138,7 @@ div.navbar li.dropdown > a + ul > li:hover > a, div.navbar li.dropdown > a + ul 
     height:           calc(100% - var(--header-height) - var(--navbar-height));
     overflow-y:       auto;
     scrollbar-width:  none;
+    opacity:          0.8;
 }
 
 #mainContainer h1 {
@@ -141,8 +146,146 @@ div.navbar li.dropdown > a + ul > li:hover > a, div.navbar li.dropdown > a + ul 
     text-align: center;
 }
 
+#mainContainer a {
+    font-weight: bold;
+}
+
 /**
- * Künstler-Boxen
+ * FAQ-Format
+ */
+
+div.qa-wrapper {
+    padding: 15px 0;
+}
+
+div.qa-wrapper:first-of-type {
+    padding-top: 0;
+}
+
+div.qa-wrapper > h3 {
+    margin-top: 0;
+}
+
+div.qa-wrapper > p {
+    margin-bottom: 0;
+}
+
+div.qa-wrapper + div.qa-wrapper {
+    border-top: 2px solid var(--dropdown-color);
+}
+
+/**
+ * Contact (Team-Seite)
+ */
+
+div.contact-wrapper {
+    display: inline-block;
+    width:   50%;
+    float:   left;
+}
+
+div.contact-wrapper + div.contact-wrapper + div.contact-wrapper {
+    margin-top: 20px;
+}
+
+div.contact-wrapper + p + hr {
+    margin-top:    30px;
+    margin-bottom: 0;
+    display:       inline-block;
+    width:         100%;
+}
+
+div.contact-wrapper > img {
+    float:        left;
+    width:        210px;
+    height:       210px;
+    margin-right: 20px;
+}
+
+div.contact-wrapper > div {
+    float: left;
+    width: calc(100% - 230px);
+}
+
+div.contact-wrapper > div > h3 {
+    margin-top: 0;
+}
+
+/**
+ * Activities
+ */
+
+div.activity {
+    display: inline-block;
+    width:   100%;
+    float:   left;
+}
+
+div.activity + div.activity {
+    margin-top: 20px;
+}
+
+div.activity + p + hr {
+    margin-top:    30px;
+    margin-bottom: 30px;
+    display:       inline-block;
+    width:         100%;
+}
+
+div.activity > img {
+    float:        left;
+    width:        256px;
+    height:       256px;
+    margin-right: 20px;
+}
+
+div.activity > div {
+    float: left;
+    width: calc(100% - 276px);
+}
+
+div.activity > div > h3 {
+    margin-top: 0;
+}
+
+/**
+ * Sponsors
+ */
+
+div.mainSponsorGrid {
+    display:               grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:              50px;
+    margin-bottom:         100px;
+}
+
+div.otherSponsorGrid {
+    display:               grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap:              20px;
+}
+
+
+div.sponsor {
+    text-align: center;
+}
+
+div.sponsor > h3 {
+    margin:  0;
+    padding: 15px;
+}
+
+div.mainSponsorGrid div.sponsor > h3 {
+    font-weight: bold;
+}
+
+div.sponsor > img {
+    max-width:  100%;
+    max-height: calc(100% - var(--sponsor-heading-height));
+}
+
+/**
+ * Artist boxes
  */
 
 div.artistGrid {
@@ -170,7 +313,4 @@ div.artist > .artist-image {
     max-height: 200px;
     display:    block;
     margin:     0 auto;
-}
-
-div.artist > .artist-details {
 }
