@@ -9,7 +9,7 @@
     --common-background-color:     #282828;
     --dropdown-color:              #a22464;
     --navbar-height:               50px;
-    --header-height:               250px;
+    --header-height:               200px;
     --sponsor-heading-height:      52px;
 }
 
@@ -25,18 +25,17 @@ html, body {
 
 body {
     height:                100vh;
-    background-color:      var(--body-background-color);
+    background-color:      var(--common-background-color);
     color:                 var(--common-text-color);
     background-image:      url('/assets/img/Poster_Dystopia.png');
     background-attachment: fixed;
 }
 
 .navbar {
-    background-color: var(--navigation-background-color);
-    height:           var(--navbar-height);
-    display:          block;
-    float:            left;
-    width:            100%;
+    height:  var(--navbar-height);
+    display: block;
+    float:   left;
+    width:   100%;
 }
 
 .container {
@@ -65,13 +64,14 @@ hr {
  */
 
 div.navbar ul.inline {
-    list-style-type: none;
-    display:         flex;
-    justify-content: space-evenly;
-    width:           100%;
-    float:           left;
-    margin:          0;
-    padding:         0;
+    list-style-type:  none;
+    display:          flex;
+    justify-content:  space-evenly;
+    width:            100%;
+    float:            left;
+    margin:           0;
+    padding:          0;
+    background-color: var(--navigation-background-color);
 }
 
 div.navbar ul.inline li {
