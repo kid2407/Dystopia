@@ -292,9 +292,21 @@ div.mainSponsorGrid div.sponsor > h3 {
     font-weight: bold;
 }
 
-div.sponsor > img {
-    max-width:  100%;
-    max-height: calc(100% - var(--sponsor-heading-height));
+div.sponsor > div {
+    display:     grid;
+    height:      calc(100% - var(--sponsor-heading-height));
+    align-items: center;
+}
+
+div.sponsor > div > img {
+    max-width:  232px;
+    max-height: 232px;
+    margin:     auto;
+}
+
+.mainSponsorGrid div.sponsor > div > img {
+    max-width:  250px;
+    max-height: 250px;
 }
 
 /**
