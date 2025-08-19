@@ -251,6 +251,16 @@ div.activity > div > h3 {
     margin-top: 0;
 }
 
+div.activity-times {
+    display:               grid;
+    grid-gap:              20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+div.activity-times > .weekday > h4, div.activity-times > .weekday > p {
+    margin-bottom: 0;
+}
+
 /**
  * Sponsors
  */
