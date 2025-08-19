@@ -29,6 +29,7 @@ body {
     color:                 var(--common-text-color);
     background-image:      url('/assets/img/Poster_Dystopia.png');
     background-attachment: fixed;
+    font-family:           'Calibri', sans-serif;
 }
 
 .navbar {
@@ -149,6 +150,7 @@ div.navbar li.dropdown > a + ul > li:hover > a, div.navbar li.dropdown > a + ul 
 
 #mainContainer a {
     font-weight: bold;
+    color:       red;
 }
 
 /**
@@ -292,26 +294,73 @@ div.sponsor > img {
 div.artistGrid {
     display:               grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap:              30px 20px;
+    justify-items:         center;
 }
 
 div.artist {
-    width:  280px;
-    height: 280px;
-    margin: 10px;
-    border: 5px solid black;
+    width:  260px;
+    height: 260px;
 }
 
-div.artist > .artist-name, div.artist > .artist-details {
-    padding:          10px;
-    text-transform:   uppercase;
-    display:          block;
-    background-color: var(--navigation-background-color);
-    height:           20px;
+div.artist .artist-name, div.artist .artist-details {
+    padding:        10px;
+    text-transform: uppercase;
+    display:        block;
+    height:         20px;
+    color:          black;
+    font-size:      16px;
 }
 
-div.artist > .artist-image {
-    max-width:  200px;
-    max-height: 200px;
+div.artist .artist-image {
+    max-width:  180px;
+    max-height: 180px;
     display:    block;
     margin:     0 auto;
+}
+
+div.artist {
+    position:  relative;
+    transform: rotate(5deg);
+}
+
+div.artist:nth-of-type(6n+1) {
+    transform: rotate(5deg);
+}
+
+div.artist:nth-of-type(6n+2) {
+    transform: rotate(-3deg);
+}
+
+div.artist:nth-of-type(6n+3) {
+    transform: rotate(-2deg);
+}
+
+div.artist:nth-of-type(6n+4) {
+    transform: rotate(1deg);
+}
+
+div.artist:nth-of-type(6n+5) {
+    transform: rotate(-3deg);
+}
+
+div.artist:nth-of-type(6n+6) {
+    transform: rotate(2deg);
+}
+
+div.artist > .note-image {
+    position: relative;
+}
+
+div.artist > .note-image img {
+    width:  100%;
+    height: auto;
+}
+
+div.artist > .artist-data {
+    position: absolute;
+    left:     0;
+    top:      0;
+    width:    100%;
+    z-index:  2;
 }
