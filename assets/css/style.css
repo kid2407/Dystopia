@@ -342,31 +342,30 @@ div.artist .artist-image {
 }
 
 div.artist {
-    position:  relative;
+    position: relative;
+}
+
+#mainContainer:not(.live) div.artist:nth-of-type(6n+1), #mainContainer.live div.artist:nth-of-type(6n+5) {
     transform: rotate(5deg);
 }
 
-div.artist:nth-of-type(6n+1) {
-    transform: rotate(5deg);
-}
-
-div.artist:nth-of-type(6n+2) {
+#mainContainer:not(.live) div.artist:nth-of-type(6n+2), #mainContainer.live div.artist:nth-of-type(6n+6) {
     transform: rotate(-3deg);
 }
 
-div.artist:nth-of-type(6n+3) {
+#mainContainer:not(.live) div.artist:nth-of-type(6n+3), #mainContainer.live div.artist:nth-of-type(6n+1) {
     transform: rotate(-2deg);
 }
 
-div.artist:nth-of-type(6n+4) {
+#mainContainer:not(.live) div.artist:nth-of-type(6n+4), #mainContainer.live div.artist:nth-of-type(6n+2) {
     transform: rotate(1deg);
 }
 
-div.artist:nth-of-type(6n+5) {
+#mainContainer:not(.live) div.artist:nth-of-type(6n+5), #mainContainer.live div.artist:nth-of-type(6n+3) {
     transform: rotate(-3deg);
 }
 
-div.artist:nth-of-type(6n+6) {
+#mainContainer:not(.live) div.artist:nth-of-type(6n+6), #mainContainer.live div.artist:nth-of-type(6n+4) {
     transform: rotate(2deg);
 }
 
