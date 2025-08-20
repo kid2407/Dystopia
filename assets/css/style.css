@@ -60,6 +60,23 @@ hr {
     border: 1px solid var(--dropdown-color);
 }
 
+img.limitedSize {
+    max-width: 150px;
+}
+
+.increasedOpacity {
+    background-color: #282828f0;
+}
+
+.increasedOpacity + div:not(.increasedOpacity) {
+    margin-top: 30px;
+}
+
+.stretchForPadding {
+    margin-left:  -10px;
+    margin-right: -10px;
+}
+
 /**
  * Navbar
  */
@@ -135,11 +152,10 @@ div.navbar li.dropdown > a + ul > li:hover > a, div.navbar li.dropdown > a + ul 
  */
 
 #mainContainer {
-    background-color: var(--common-background-color);
+    background-color: #282828CC;
     height:           calc(100% - var(--header-height) - var(--navbar-height));
     overflow-y:       auto;
     scrollbar-width:  none;
-    opacity:          0.8;
 }
 
 #mainContainer h1 {
@@ -277,7 +293,6 @@ div.mainSponsorGrid {
     grid-template-columns: repeat(3, 1fr);
     grid-gap:              50px;
     margin-bottom:         100px;
-    margin-top:            50px;
 }
 
 div.otherSponsorGrid {
@@ -326,10 +341,6 @@ div.artistGrid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap:              30px 20px;
     justify-items:         center;
-}
-
-p + div.artistGrid {
-    margin-top: 50px;
 }
 
 div.artist {
