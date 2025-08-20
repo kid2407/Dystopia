@@ -153,6 +153,13 @@ div.navbar li.dropdown > a + ul > li:hover > a, div.navbar li.dropdown > a + ul 
     color:       red;
 }
 
+hr.spacing {
+    margin-top:    30px;
+    margin-bottom: 30px;
+    display:       inline-block;
+    width:         100%;
+}
+
 /**
  * FAQ-Format
  */
@@ -270,6 +277,7 @@ div.mainSponsorGrid {
     grid-template-columns: repeat(3, 1fr);
     grid-gap:              50px;
     margin-bottom:         100px;
+    margin-top:            50px;
 }
 
 div.otherSponsorGrid {
@@ -318,6 +326,10 @@ div.artistGrid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap:              30px 20px;
     justify-items:         center;
+}
+
+p + div.artistGrid {
+    margin-top: 50px;
 }
 
 div.artist {
