@@ -29,6 +29,9 @@ body {
     color:                 var(--common-text-color);
     background-image:      url('/assets/img/Poster_Dystopia.png');
     background-attachment: fixed;
+    background-position:   center;
+    background-repeat:     no-repeat;
+    background-size:       cover;
     font-family:           'Calibri', sans-serif;
 }
 
@@ -174,6 +177,10 @@ hr.spacing {
     margin-bottom: 30px;
     display:       inline-block;
     width:         100%;
+}
+
+img.restrainedImage {
+    max-width: 100%;
 }
 
 /**
