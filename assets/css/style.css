@@ -346,13 +346,14 @@ div.sponsor > div > img {
 div.artistGrid {
     display:               grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap:              30px 20px;
+    grid-gap:              40px 20px;
     justify-items:         center;
 }
 
 div.artist {
-    width:  260px;
-    height: 260px;
+    width:    260px;
+    height:   280px;
+    position: relative;
 }
 
 div.artist .artist-name, div.artist .artist-details {
@@ -365,38 +366,58 @@ div.artist .artist-name, div.artist .artist-details {
 }
 
 div.artist .artist-image {
-    max-width:  180px;
-    max-height: 180px;
+    max-width:  220px;
+    max-height: 220px;
     display:    block;
     margin:     0 auto;
-}
-
-div.artist {
-    position: relative;
 }
 
 #mainContainer:not(.live) div.artist:nth-of-type(6n+1), #mainContainer.live div.artist:nth-of-type(6n+5) {
     transform: rotate(5deg);
 }
 
-#mainContainer:not(.live) div.artist:nth-of-type(6n+2), #mainContainer.live div.artist:nth-of-type(6n+6) {
+#mainContainer:not(.live) div.artist:nth-of-type(6n+1) > div.note-image > img.ductTape, #mainContainer.live div.artist:nth-of-type(6n+5) > div.note-image > img.ductTape {
+    transform: rotate(-8deg);
+}
+
+#mainContainer:not(.live) div.artist:nth-of-type(6n+2), #mainContainer.live div.artist:nth-of-type(6n+5) {
     transform: rotate(-3deg);
+}
+
+#mainContainer:not(.live) div.artist:nth-of-type(6n+2) > div.note-image > img.ductTape, #mainContainer.live div.artist:nth-of-type(6n+6) > div.note-image > img.ductTape {
+    transform: rotate(1deg);
 }
 
 #mainContainer:not(.live) div.artist:nth-of-type(6n+3), #mainContainer.live div.artist:nth-of-type(6n+1) {
     transform: rotate(-2deg);
 }
 
+#mainContainer:not(.live) div.artist:nth-of-type(6n+3) > div.note-image > img.ductTape, #mainContainer.live div.artist:nth-of-type(6n+1) > div.note-image > img.ductTape {
+    transform: rotate(3deg);
+}
+
 #mainContainer:not(.live) div.artist:nth-of-type(6n+4), #mainContainer.live div.artist:nth-of-type(6n+2) {
     transform: rotate(1deg);
+}
+
+#mainContainer:not(.live) div.artist:nth-of-type(6n+4) > div.note-image > img.ductTape, #mainContainer.live div.artist:nth-of-type(6n+2) > div.note-image > img.ductTape {
+    transform: rotate(-4deg);
 }
 
 #mainContainer:not(.live) div.artist:nth-of-type(6n+5), #mainContainer.live div.artist:nth-of-type(6n+3) {
     transform: rotate(-3deg);
 }
 
+#mainContainer:not(.live) div.artist:nth-of-type(6n+5) > div.note-image > img.ductTape, #mainContainer.live div.artist:nth-of-type(6n+3) > div.note-image > img.ductTape {
+    transform: rotate(5deg);
+}
+
 #mainContainer:not(.live) div.artist:nth-of-type(6n+6), #mainContainer.live div.artist:nth-of-type(6n+4) {
     transform: rotate(2deg);
+}
+
+#mainContainer:not(.live) div.artist:nth-of-type(6n+6) > div.note-image > img.ductTape, #mainContainer.live div.artist:nth-of-type(6n+4) > div.note-image > img.ductTape {
+    transform: rotate(3deg);
 }
 
 div.artist > .note-image {
@@ -408,10 +429,18 @@ div.artist > .note-image img {
     height: auto;
 }
 
+div.artist > .note-image img.ductTape {
+    position: absolute;
+    left:     80px;
+    top:      -15px;
+    width:    100px;
+    z-index:  3;
+}
+
 div.artist > .artist-data {
     position: absolute;
     left:     0;
-    top:      0;
+    top:      20px;
     width:    100%;
     z-index:  2;
 }
