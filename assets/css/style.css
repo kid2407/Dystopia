@@ -351,9 +351,10 @@ div.artistGrid {
 }
 
 div.artist {
-    width:    260px;
-    height:   280px;
-    position: relative;
+    width:            260px;
+    height:           280px;
+    position:         relative;
+    background-color: var(--dropdown-color);
 }
 
 div.artist .artist-name, div.artist .artist-details {
@@ -422,11 +423,6 @@ div.artist .artist-image {
 
 div.artist > .note-image {
     position: relative;
-}
-
-div.artist > .note-image img {
-    width:  100%;
-    height: auto;
 }
 
 div.artist > .note-image img.ductTape {
