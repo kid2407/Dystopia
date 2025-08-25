@@ -357,7 +357,7 @@ div.artist {
     background-color: var(--dropdown-color);
 }
 
-div.artist .artist-name, div.artist .artist-details {
+div.artist .artist-details {
     padding:        10px;
     text-transform: uppercase;
     display:        block;
