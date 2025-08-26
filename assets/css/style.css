@@ -230,14 +230,14 @@ div.contact-wrapper + p + hr {
 
 div.contact-wrapper > img {
     float:        left;
-    width:        210px;
-    height:       210px;
+    width:        220px;
+    height:       220px;
     margin-right: 20px;
 }
 
 div.contact-wrapper > div {
     float: left;
-    width: calc(100% - 230px);
+    width: calc(100% - 240px);
 }
 
 div.contact-wrapper > div > h3 {
