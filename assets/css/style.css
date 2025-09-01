@@ -343,7 +343,7 @@ div.sponsor > div > img {
  * Artist boxes
  */
 
-div.artistGrid {
+div#artistGrid {
     display:               grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap:              40px 20px;
@@ -439,4 +439,12 @@ div.artist > .artist-data {
     top:      20px;
     width:    100%;
     z-index:  2;
+}
+
+.spoiler .artist-image {
+    filter: blur(10px);
+}
+
+.spoiler .artist-details {
+    filter: blur(5px);
 }
