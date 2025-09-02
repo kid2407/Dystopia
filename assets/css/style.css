@@ -352,7 +352,7 @@ div#artistGrid {
 
 div.artist {
     width:            260px;
-    height:           280px;
+    height:           300px;
     position:         relative;
     background-color: var(--dropdown-color);
 }
@@ -363,7 +363,6 @@ div.artist .artist-details {
     display:        block;
     height:         20px;
     color:          black;
-    font-size:      16px;
 }
 
 div.artist .artist-image {
@@ -441,10 +440,6 @@ div.artist > .artist-data {
     z-index:  2;
 }
 
-.spoiler .artist-image {
-    filter: blur(10px);
-}
-
-.spoiler .artist-details {
-    filter: blur(5px);
+.spoiler {
+    filter: blur(20px);
 }

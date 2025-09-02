@@ -1,9 +1,21 @@
-const START_DATE = new Date(2025, 8, 1)
+const START_DATE = new Date(2025, 8, 0)
 const END_DATE = new Date(2025, 8, 10)
 const TOTAL_DAYS = (END_DATE - START_DATE) / (1000 * 3600 * 24)
 
 
 const DYSTOPIA = {
+    getDayForArtist: (artist) => {
+        let day = 1
+
+        artist.classList.forEach((cssClass) => {
+            if (cssClass.startsWith('day_')) {
+                day = cssClass.split('_')[1]
+            }
+        })
+
+        return day
+    },
+
     revealArtists: () => {
         let currentDate = new Date()
         currentDate.setHours(0, 0, 0, 0)
@@ -17,16 +29,15 @@ const DYSTOPIA = {
             }
         } else {
             for (let i = 0; i < allArtists.length; i++) {
-                console.log(i)
-                console.log(allArtists[i])
-                if ((i % TOTAL_DAYS) <= currentDayCount) {
-                    allArtists[i].classList.remove('spoiler')
+                let currentArtist = allArtists[i]
+                let artistDay = DYSTOPIA.getDayForArtist(currentArtist)
+                if (currentDayCount >= artistDay) {
+                    currentArtist.classList.remove('spoiler')
                 }
             }
         }
 
         console.log(currentDayCount + " von " + TOTAL_DAYS)
-        console.log(allArtists)
     }
 }
 
