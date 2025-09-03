@@ -18,8 +18,6 @@ const DYSTOPIA = {
 
     revealArtists: () => {
         let currentDate = new Date()
-        currentDate.setDate(4)
-        currentDate.setHours(22, 1, 0, 0)
         let currentDayCount = Math.max(Math.floor((currentDate - START_DATE) / (1000 * 3600 * 24)), 1)
         let allArtists = document.getElementById('artistGrid').children
         let finalDayOrLater = currentDate >= END_DATE
