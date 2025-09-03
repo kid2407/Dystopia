@@ -169,7 +169,7 @@ div.navbar li.dropdown > a + ul > li:hover > a, div.navbar li.dropdown > a + ul 
 
 #mainContainer a {
     font-weight: bold;
-    color:       red;
+    color:       #ff7a7a;
 }
 
 hr.spacing {
