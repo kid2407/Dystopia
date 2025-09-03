@@ -1,5 +1,5 @@
-const START_DATE = new Date(2025, 8, 0)
-const END_DATE = new Date(2025, 8, 10)
+const START_DATE = new Date(2025, 8, 2, 22)
+const END_DATE = new Date(2025, 8, 10, 22)
 const TOTAL_DAYS = (END_DATE - START_DATE) / (1000 * 3600 * 24)
 
 
@@ -18,8 +18,9 @@ const DYSTOPIA = {
 
     revealArtists: () => {
         let currentDate = new Date()
-        currentDate.setHours(0, 0, 0, 0)
-        let currentDayCount = (currentDate - START_DATE) / (1000 * 3600 * 24)
+        currentDate.setDate(4)
+        currentDate.setHours(22, 1, 0, 0)
+        let currentDayCount = Math.max(Math.floor((currentDate - START_DATE) / (1000 * 3600 * 24)), 1)
         let allArtists = document.getElementById('artistGrid').children
         let finalDayOrLater = currentDate >= END_DATE
 
