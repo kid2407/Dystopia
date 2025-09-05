@@ -443,3 +443,9 @@ div.artist > .artist-data {
 .spoiler {
     filter: blur(20px);
 }
+
+.disclaimer {
+    text-align: center;
+    font-style: italic;
+    font-size:  14px;
+}
