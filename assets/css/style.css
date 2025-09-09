@@ -27,7 +27,7 @@ body {
     height:                100vh;
     background-color:      var(--common-background-color);
     color:                 var(--common-text-color);
-    background-image:      url('/assets/img/Poster_Dystopia.png');
+    background-image:      url('/dystopia/assets/img/Poster_Dystopia.png');
     background-attachment: fixed;
     background-position:   center;
     background-repeat:     no-repeat;
@@ -448,4 +448,24 @@ div.artist > .artist-data {
     text-align: center;
     font-style: italic;
     font-size:  14px;
+}
+
+div.activity.popUp {
+    min-height: 150px;
+    width:      50%;
+}
+
+div.activity.popUp + div.activity {
+    margin-top: 0;
+}
+
+div.activity.popUp > img {
+    max-width:  150px;
+    max-height: 150px;
+    width:      100%;
+    height:     auto;
+}
+
+h2 {
+    margin-top: 0;
 }
