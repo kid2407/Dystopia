@@ -350,6 +350,13 @@ div#artistGrid {
     justify-items:         center;
 }
 
+div#artistGrid.live div.artist .artist-details {
+    font-weight: bold;
+    font-size:   18px;
+    line-height: 40px;
+    height:      unset;
+}
+
 div.artist {
     width:            260px;
     height:           300px;
